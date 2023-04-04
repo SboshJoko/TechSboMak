@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="ÜTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge"
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="output.html" method="GET">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label>
+                    Password
+                    <input type="password" password="password" required>
+                </label>
+            </div>
+            <div>
+                <label for="date">Birthdate</label>
+                <input type="date" name="date" id="date" min="2019-05-30">
+            </div>
+            <div>
+                Client
+                <div>
+                    <label for="old">Old</label>
+                    <input type="checkbox" name="old" id="old">
+                </div>
+                <div>
+                    <label for="new">New</label>
+                    <input type="checkbox" name="new" id="new">
+                </div>
+            </div>
+            <div>
+                Gender
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                </div>
+                <div>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </div>
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

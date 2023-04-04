@@ -2,6 +2,7 @@ import cv2
 import time
 import datetime
 
+
 cap = cv2.VideoCapture(0)
 
 face_cascade = cv2.CascadeClassifier(
@@ -34,11 +35,13 @@ while True:
             out = cv2.VideoWriter(f"{current_time}.mp4", fourcc, 20, frame_size)
             print("Started recording!")
     elif detection:
-        if time.time - detection_stopped_time >= SECONDS_TO_RECORD_AFTER_DETECTION:
-            detection = False
-            timer_started = False
-            out.release()
-            print('Stop Recording!')
+        if timer_started:
+
+            if  time.time() - (detection_stopped_time) >= (SECONDS_TO_RECORD_AFTER_DETECTION):
+                detection = False
+                timer_started = False
+                out.release()
+                print("Stop Recording!")
         else:
             timer_started = True
             detection_stopped_time = time.time()
